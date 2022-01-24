@@ -1,0 +1,20 @@
+// La función recursiva para determinar si un numero es palindromo
+
+function function isPalindrome(number) {
+    if(number <0 || !Number.isInteger(number)) return null;
+    
+    var aString = number.toString(); // convierto el numero a string
+    if(aString<2) return true;
+    
+    let compare = aString[0] === aString.length - 1;
+
+    if(compare){
+        let nuevoNumero= aString.split(""); //convertimos la string en un array
+        nuevoNumero.shift(); //eliminamos el primer elemento 
+        nuevoNumero.pop(); // eliminamos el ultimo elemento
+        aString = nuevoNumero.join(""); 
+        compare = isPalindrome(aString);
+
+    }
+    return compare;
+    }
