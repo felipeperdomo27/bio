@@ -18,3 +18,35 @@ function function isPalindrome(number) {
     }
     return compare;
     }
+
+
+
+
+
+//////////CLOUSERS///////////////
+
+Implementar la funcion 'exponencial' que recibe un parametro entero 'exp'
+// y retorna una una funcion, nos referiremos a esta ultima como funcion hija,
+// y a 'exponencial' como la funcion padre, la funcion hija debe de recibir 
+// un parametro y retornar dicho parametro elevado al parametro 'exp' de 
+// la funcion padre original 'exponencial'
+// Ejemplo:
+// > var sqrt = exponencial(2);
+// > sqrt(2);
+// < 4
+// > sqrt(3);
+// < 9
+// > sqrt(4);
+// < 16
+
+ function exponencial(exp) {
+
+      return function (num){        
+      var resultado = Math.pow(num, exp)
+       return resultado;
+    }
+
+ };
+var sqrt = exponencial(5);
+console.log(sqrt(4));
+console.log(sqrt(2));
